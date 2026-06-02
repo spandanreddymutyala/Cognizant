@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap5-sass-customization",
+  "version": "1.0.0",
+  "description": "Custom compilation infrastructure setup pattern",
+  "main": "index.html",
+  "scripts": {
+    "compile-sass": "sass scss/custom.scss css/bootstrap-custom.css --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
