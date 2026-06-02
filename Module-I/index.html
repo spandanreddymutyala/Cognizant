@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Community Event Portal</title>
+
+  <!-- Google Font (CSS Exercise 5) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- External stylesheet (CSS Exercise 1) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Embedded <style> tag — body background (CSS Exercise 1) -->
+  <style>
+    body {
+      background-color: #f4f1eb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       Navigation (HTML Exercise 2)
+  ============================================================ -->
+  <nav id="mainNav">
+    <div class="nav-brand">🏛 CityEvents</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#news">Bulletin</a></li>
+      <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       Main
+  ============================================================ -->
+  <main>
+
+    <!-- Home Section (HTML Exercise 3) -->
+    <section id="home">
+      <!-- Inline style — red heading (CSS Exercise 1) -->
+      <h1 id="mainHeader" style="color: red;">Welcome to the Local Community Event Portal</h1>
+
+      <!-- Welcome Banner with id (HTML Exercise 3) -->
+      <div id="welcomeBanner">
+        <p>Hello, <strong>Resident!</strong> We're glad you're here.</p>
+        <!-- Inline style for special offer span (HTML Exercise 3) -->
+        <span style="color: red; font-weight: bold;">🎉 Special Offer: Free entry to all events this weekend!</span>
+      </div>
+
+      <p class="highlight">Explore events, register, and connect with your community all in one place.</p>
+    </section>
+
+    <!-- Events Section (HTML Exercise 2) -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+
+      <!-- Event Cards (CSS Exercise 3 — .eventCard class) -->
+      <div class="eventCard">
+        <h3>Summer Music Fest</h3>
+        <p>Date: 15 June 2025 | Venue: City Park</p>
+        <a href="#register" class="cta-button">Register Now</a>
+      </div>
+
+      <div class="eventCard">
+        <h3>Food &amp; Culture Fair</h3>
+        <p>Date: 22 June 2025 | Venue: Town Hall</p>
+        <a href="#register" class="cta-button">Register Now</a>
+      </div>
+
+      <div class="eventCard">
+        <h3>Marathon 2025</h3>
+        <p>Date: 5 July 2025 | Venue: Main Boulevard</p>
+        <a href="#register" class="cta-button">Register Now</a>
+      </div>
+
+      <!-- Admin Table (CSS Exercise 7 / HTML Exercise 4) -->
+      <h2>Events Admin Table</h2>
+      <table id="eventsTable">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Venue</th>
+            <th>Seats Left</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Summer Music Fest</td>
+            <td>15 Jun 2025</td>
+            <td>City Park</td>
+            <td>120</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Food &amp; Culture Fair</td>
+            <td>22 Jun 2025</td>
+            <td>Town Hall</td>
+            <td>80</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Marathon 2025</td>
+            <td>5 Jul 2025</td>
+            <td>Main Boulevard</td>
+            <td>200</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Art Exhibition</td>
+            <td>10 Jul 2025</td>
+            <td>Museum</td>
+            <td>0</td>
+            <td>Full</td>
+          </tr>
+          <tr>
+            <td>Yoga in the Park</td>
+            <td>20 Jul 2025</td>
+            <td>City Park</td>
+            <td>50</td>
+            <td>Open</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Gallery Section (HTML Exercise 4) -->
+    <section id="gallery">
+      <h2>Community Event Gallery</h2>
+      <table class="gallery-table">
+        <caption>Photos from Past Community Events</caption>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/seed/music/200/150" alt="Music Festival 2024" title="Music Festival 2024" class="event-img" />
+            <p>Music Festival 2024</p>
+          </td>
+          <td>
+            <img src="https://picsum.photos/seed/food/200/150" alt="Food Fair 2024" title="Food Fair 2024" class="event-img" />
+            <p>Food Fair 2024</p>
+          </td>
+          <td>
+            <img src="https://picsum.photos/seed/marathon/200/150" alt="Marathon 2024" title="Marathon 2024" class="event-img" ondblclick="this.style.width='400px'" />
+            <p>Marathon 2024 (double-click to enlarge)</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/seed/art/200/150" alt="Art Exhibition 2024" title="Art Exhibition 2024" class="event-img" ondblclick="this.style.width='400px'" />
+            <p>Art Exhibition 2024</p>
+          </td>
+          <td>
+            <img src="https://picsum.photos/seed/yoga/200/150" alt="Yoga Day 2024" title="Yoga Day 2024" class="event-img" />
+            <p>Yoga Day 2024</p>
+          </td>
+          <td>
+            <img src="https://picsum.photos/seed/community/200/150" alt="Community Meet 2024" title="Community Meet 2024" class="event-img" />
+            <p>Community Meet 2024</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Registration Form (HTML Exercise 5 & 6) -->
+    <section id="register">
+      <h2>Event Registration Form</h2>
+      <div class="form-wrapper">
+        <!-- name field — autofocus -->
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required autofocus />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <!-- onblur to validate phone (HTML Exercise 6) -->
+          <input type="tel" id="phone" name="phone" placeholder="10-digit number"
+            onblur="validatePhone(this)" />
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">Preferred Date</label>
+          <input type="date" id="eventDate" name="eventDate" required />
+        </div>
+
+        <!-- onchange to show fee (HTML Exercise 6) -->
+        <div class="form-group">
+          <label for="eventType">Event Type</label>
+          <select id="eventType" name="eventType" onchange="showFee(this)">
+            <option value="">-- Select an Event --</option>
+            <option value="music" data-fee="₹200">Summer Music Fest</option>
+            <option value="food" data-fee="₹150">Food &amp; Culture Fair</option>
+            <option value="marathon" data-fee="Free">Marathon 2025</option>
+            <option value="yoga" data-fee="₹50">Yoga in the Park</option>
+          </select>
+          <p id="feeDisplay" class="fee-display"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <!-- onkeyup to count characters (HTML Exercise 6) -->
+          <textarea id="message" name="message" placeholder="Any special requirements..."
+            onkeyup="countChars(this)"></textarea>
+          <small id="charCount">0 characters typed</small>
+        </div>
+
+        <!-- onclick for confirmation (HTML Exercise 6) -->
+        <button type="button" class="cta-button" onclick="submitForm()">Register</button>
+
+        <!-- <output> element for confirmation (HTML Exercise 5) -->
+        <output id="formOutput" class="form-output"></output>
+      </div>
+    </section>
+
+    <!-- Feedback Section (HTML Exercise 6) -->
+    <section id="feedback">
+      <h2>Event Feedback</h2>
+      <div class="form-wrapper">
+        <div class="form-group">
+          <label for="feedbackText">Your Feedback</label>
+          <textarea id="feedbackText" placeholder="Share your experience..."
+            onkeyup="countFeedbackChars(this)"></textarea>
+          <small id="feedbackCharCount">0 characters</small>
+        </div>
+        <button type="button" class="cta-button" onclick="submitFeedback()">Submit Feedback</button>
+        <output id="feedbackOutput" class="form-output"></output>
+      </div>
+    </section>
+
+    <!-- Video Section (HTML Exercise 7) -->
+    <section id="video">
+      <h2>Event Promo Video</h2>
+      <p id="videoStatus" class="video-status"></p>
+      <video
+        width="640"
+        controls
+        oncanplay="document.getElementById('videoStatus').textContent = '✅ Video ready to play'"
+      >
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Preferences Section (HTML Exercise 8) -->
+    <section id="preferences">
+      <h2>Your Preferences</h2>
+      <p>We remember your last selected event type for a personalised experience.</p>
+      <div class="form-group">
+        <label for="prefEvent">Preferred Event</label>
+        <select id="prefEvent" onchange="savePreference(this)">
+          <option value="">-- Select --</option>
+          <option value="music">Summer Music Fest</option>
+          <option value="food">Food &amp; Culture Fair</option>
+          <option value="marathon">Marathon 2025</option>
+          <option value="yoga">Yoga in the Park</option>
+        </select>
+      </div>
+      <button type="button" class="cta-button" onclick="clearPreferences()">Clear Preferences</button>
+      <p id="prefStatus" class="fee-display"></p>
+    </section>
+
+    <!-- Geolocation Section (HTML Exercise 9) -->
+    <section id="location">
+      <h2>Find Nearby Events</h2>
+      <p>Allow location access to find events closest to you.</p>
+      <button type="button" class="cta-button" onclick="findLocation()">📍 Find Nearby Events</button>
+      <p id="geoResult" class="fee-display"></p>
+    </section>
+
+    <!-- Community Bulletin — Multi-column (CSS Exercise 9) -->
+    <section id="news">
+      <h2>Community Bulletin</h2>
+      <div class="bulletin-columns">
+        <p>The city council is proud to announce a full calendar of community events for the summer season.
+        Residents are encouraged to participate in activities ranging from arts and culture to fitness and wellness.
+        All events are family-friendly and open to everyone regardless of age or background.</p>
+
+        <p>Volunteers are needed to help manage registrations and guide attendees at each venue.
+        If you'd like to contribute, please visit the registration desk or contact the events team at cityevents@local.gov.in.
+        Your involvement makes these events possible and meaningful for the whole community.</p>
+
+        <p>Special provisions have been made for senior citizens and differently-abled residents,
+        including accessible seating, transport assistance, and dedicated help desks at every venue.
+        We are committed to ensuring every resident can enjoy and participate fully in community life.</p>
+
+        <p>Stay updated by subscribing to our monthly newsletter. Get early bird access to event registrations,
+        exclusive discounts, and behind-the-scenes stories from last year's most-loved events.
+        Together, we build a stronger, more connected community.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       Footer
+  ============================================================ -->
+  <footer>
+    <p>&copy; 2025 Local City Council | All rights reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // ---- onbeforeunload warning (HTML Exercise 7) ----
+    let formDirty = false;
+    document.querySelectorAll('input, textarea, select').forEach(el => {
+      el.addEventListener('change', () => { formDirty = true; });
+    });
+    window.onbeforeunload = function () {
+      if (formDirty) return "You have unsaved changes. Are you sure you want to leave?";
+    };
+
+    // ---- Phone validation — onblur (HTML Exercise 6) ----
+    function validatePhone(input) {
+      const val = input.value.trim();
+      if (val && !/^\d{10}$/.test(val)) {
+        input.style.outline = '2px solid red';
+        alert('Please enter a valid 10-digit phone number.');
+      } else {
+        input.style.outline = '2px solid green';
+      }
+    }
+
+    // ---- Show event fee — onchange (HTML Exercise 6) ----
+    function showFee(select) {
+      const selected = select.options[select.selectedIndex];
+      const fee = selected.dataset.fee || '';
+      const display = document.getElementById('feeDisplay');
+      display.textContent = fee ? `Entry Fee: ${fee}` : '';
+
+      // save to localStorage (HTML Exercise 8)
+      if (select.id === 'eventType' && select.value) {
+        localStorage.setItem('preferredEvent', select.value);
+      }
+    }
+
+    // ---- Character counter (HTML Exercise 6) ----
+    function countChars(textarea) {
+      document.getElementById('charCount').textContent =
+        textarea.value.length + ' characters typed';
+    }
+
+    function countFeedbackChars(textarea) {
+      document.getElementById('feedbackCharCount').textContent =
+        textarea.value.length + ' characters';
+    }
+
+    // ---- Form submit — onclick (HTML Exercise 6) ----
+    function submitForm() {
+      const name = document.getElementById('fullName').value.trim();
+      const event = document.getElementById('eventType').value;
+      const output = document.getElementById('formOutput');
+      if (!name || !event) {
+        output.textContent = '⚠️ Please fill in your name and select an event.';
+        output.style.color = 'crimson';
+        return;
+      }
+      output.textContent = `✅ Thank you, ${name}! You've been registered for the event.`;
+      output.style.color = 'green';
+      formDirty = false;
+    }
+
+    // ---- Feedback submit ----
+    function submitFeedback() {
+      const text = document.getElementById('feedbackText').value.trim();
+      const output = document.getElementById('feedbackOutput');
+      if (!text) {
+        output.textContent = '⚠️ Please write your feedback before submitting.';
+        output.style.color = 'crimson';
+        return;
+      }
+      output.textContent = '✅ Thank you for your feedback!';
+      output.style.color = 'green';
+    }
+
+    // ---- localStorage — save preference (HTML Exercise 8) ----
+    function savePreference(select) {
+      localStorage.setItem('preferredEvent', select.value);
+      document.getElementById('prefStatus').textContent =
+        `Preference saved: ${select.options[select.selectedIndex].text}`;
+    }
+
+    // ---- localStorage — clear preferences (HTML Exercise 8) ----
+    function clearPreferences() {
+      localStorage.clear();
+      sessionStorage.clear();
+      document.getElementById('prefStatus').textContent = 'Preferences cleared.';
+      document.getElementById('prefEvent').value = '';
+    }
+
+    // ---- Restore preference on load (HTML Exercise 8) ----
+    window.addEventListener('load', function () {
+      const saved = localStorage.getItem('preferredEvent');
+      if (saved) {
+        const sel = document.getElementById('prefEvent');
+        sel.value = saved;
+        document.getElementById('prefStatus').textContent =
+          `Welcome back! Your saved preference: ${sel.options[sel.selectedIndex].text}`;
+      }
+    });
+
+    // ---- Geolocation (HTML Exercise 9) ----
+    function findLocation() {
+      const result = document.getElementById('geoResult');
+      if (!navigator.geolocation) {
+        result.textContent = '❌ Geolocation is not supported by your browser.';
+        return;
+      }
+      result.textContent = '🔍 Locating you...';
+      navigator.geolocation.getCurrentPosition(
+        function (pos) {
+          result.textContent =
+            `📍 Your coordinates: Latitude ${pos.coords.latitude.toFixed(4)}, Longitude ${pos.coords.longitude.toFixed(4)}. Showing events near you!`;
+        },
+        function (err) {
+          if (err.code === err.PERMISSION_DENIED) {
+            result.textContent = '⚠️ Location permission denied. Please allow access to find nearby events.';
+          } else if (err.code === err.TIMEOUT) {
+            result.textContent = '⏱ Location request timed out. Please try again.';
+          } else {
+            result.textContent = '❌ Unable to retrieve your location.';
+          }
+        },
+        { enableHighAccuracy: true, timeout: 8000, maximumAge: 0 }
+      );
+    }
+  </script>
+
+</body>
+</html>

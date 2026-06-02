@@ -1,0 +1,530 @@
+/* ============================================================
+   styles.css — Local Community Event Portal
+   External stylesheet linked from index.html (CSS Exercise 1)
+   ============================================================ */
+
+/* ============================================================
+   CSS Exercise 1 — Universal selector reset (also Exercise 3)
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   CSS Exercise 5 — Typography: font-family, font-size, etc.
+   ============================================================ */
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2c2c2c;
+  /* background-color is set via embedded <style> in HTML */
+}
+
+/* ============================================================
+   CSS Exercise 3 — Element selector: style all <h2>
+   ============================================================ */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+/* ============================================================
+   CSS Exercise 3 — Grouping selector: h3 and p together
+   ============================================================ */
+h3, p {
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================================
+   CSS Exercise 4 — Background with gradient on section headers
+   ============================================================ */
+section {
+  padding: 3rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+  /* Gradient on section headers (CSS Exercise 4) */
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #f4f1eb;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   CSS Exercise 3 — ID selector: #mainHeader (banner heading)
+   ============================================================ */
+#mainHeader {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  /* inline style overrides the color to red as per Exercise 1 */
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   CSS Exercise 2 — Navigation styles (clean, readable section)
+   ============================================================ */
+
+/* Navigation */
+#mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  color: #f4d03f;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#mainNav ul {
+  /* CSS Exercise 6 — remove bullets from nav menu */
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#mainNav ul li {
+  /* CSS Exercise 6 — padding and margin on list items */
+  padding: 0 0.25rem;
+  margin: 0 0.1rem;
+}
+
+/* ============================================================
+   CSS Exercise 6 — Link styling with pseudo-classes
+   ============================================================ */
+
+/* :link */
+#mainNav ul li a:link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* :visited */
+#mainNav ul li a:visited {
+  color: #a5b4fc;
+}
+
+/* :hover */
+#mainNav ul li a:hover {
+  background-color: #f4d03f;
+  color: #1a1a2e;
+}
+
+/* :active */
+#mainNav ul li a:active {
+  background-color: #e2c026;
+  color: #1a1a2e;
+}
+
+/* ============================================================
+   CSS Exercise 4 — Colors using HEX and RGBA
+   ============================================================ */
+
+/* Welcome banner — CSS Exercise 3 (id selector) */
+#welcomeBanner {
+  background-color: rgba(26, 26, 46, 0.08);
+  border-left: 4px solid #1a1a2e;
+  padding: 1rem 1.5rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0;
+  color: #1a1a2e;           /* HEX color */
+}
+
+/* CSS Exercise 3 — .highlight class selector */
+.highlight {
+  background-color: rgba(244, 208, 63, 0.25);
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   CSS Exercise 2 — CTA Button (styled with comment label)
+   ============================================================ */
+
+/* Style for main CTA button */
+.cta-button {
+  display: inline-block;
+  background-color: #1a1a2e;
+  color: #f4d03f;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.cta-button:hover {
+  background-color: #f4d03f;
+  color: #1a1a2e;
+}
+
+/* ============================================================
+   CSS Exercise 3 — .eventCard class selector
+   CSS Exercise 8 — Box model: margin, padding, border
+   ============================================================ */
+
+/* Event card section */
+#events > .eventCard {
+  background-color: #ffffff;
+  border: 2px solid #1a1a2e;
+  border-radius: 8px;
+  padding: 1.5rem;          /* padding (box model) */
+  margin: 1.2rem 0;         /* margin (box model) */
+  max-width: 480px;
+  /* outline to visually separate (CSS Exercise 8) */
+  outline: 3px solid transparent;
+  transition: outline 0.2s;
+}
+
+#events > .eventCard:hover {
+  outline: 3px solid #f4d03f;
+}
+
+/* ============================================================
+   CSS Exercise 7 — Table styling
+   ============================================================ */
+
+/* Table styles */
+#eventsTable {
+  width: 100%;
+  border-collapse: collapse;  /* CSS Exercise 7 */
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+#eventsTable th,
+#eventsTable td {
+  border: 1px solid #c0c0c0;
+  padding: 0.75rem 1rem;      /* padding (CSS Exercise 7) */
+  text-align: center;          /* CSS Exercise 7 */
+}
+
+#eventsTable thead {
+  background-color: #1a1a2e;
+  color: #f4f1eb;
+}
+
+/* Zebra striping (CSS Exercise 7 — nth-child) */
+#eventsTable tbody tr:nth-child(even) {
+  background-color: rgba(26, 26, 46, 0.06);
+}
+
+#eventsTable tbody tr:hover {
+  background-color: rgba(244, 208, 63, 0.2);
+}
+
+/* ============================================================
+   Gallery table styles (HTML Exercise 4)
+   ============================================================ */
+
+/* Gallery table */
+.gallery-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.gallery-table caption {
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.gallery-table td {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+/* Event images */
+.event-img {
+  border: 3px solid #1a1a2e;
+  border-radius: 4px;
+  display: block;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  transition: width 0.3s;
+  cursor: pointer;
+}
+
+/* ============================================================
+   Form styles (HTML Exercise 5)
+   CSS Exercise 8 — outline on form fields
+   ============================================================ */
+
+/* Form wrapper */
+.form-wrapper {
+  max-width: 560px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #1a1a2e;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid #c0c0c0;
+  border-radius: 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  background-color: #fafafa;
+  /* outline on form fields (CSS Exercise 8) */
+  outline: none;
+  transition: border-color 0.2s, outline 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1a1a2e;
+  /* outline on focused form fields (CSS Exercise 8) */
+  outline: 3px solid rgba(26, 26, 46, 0.2);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* CSS Exercise 8 — visibility comparison */
+.hidden-visibility {
+  visibility: hidden; /* takes up space but invisible */
+}
+
+.hidden-display {
+  display: none; /* removed from layout entirely */
+}
+
+.fee-display {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+/* <output> element */
+.form-output {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   CSS Exercise 6 — List styling
+   ============================================================ */
+
+/* Unordered list in sections (not nav) */
+ul.styled-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+ul.styled-list li {
+  padding: 0.4rem 0;
+  margin-bottom: 0.3rem;
+}
+
+/* ============================================================
+   Video section
+   ============================================================ */
+
+/* Video section */
+#video video {
+  display: block;
+  max-width: 100%;
+  border: 3px solid #1a1a2e;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.video-status {
+  font-weight: 600;
+  color: green;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   CSS Exercise 5 — Typography
+   text-align, text-transform, letter-spacing, line-height
+   ============================================================ */
+
+/* Bulletin section typography */
+#news p {
+  text-align: justify;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   CSS Exercise 9 — Multi-column layout
+   ============================================================ */
+
+/* Multi-column newspaper bulletin */
+.bulletin-columns {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  margin-top: 1rem;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1a1a2e;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   CSS Exercise 4 — Background image on body with fallback
+   (fallback color is set in the embedded <style> in HTML)
+   ============================================================ */
+body {
+  background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  background-color: #f4f1eb; /* fallback */
+}
+
+/* ============================================================
+   CSS Exercise 10 — Media queries for responsiveness
+   ============================================================ */
+
+/* Screens smaller than 768px */
+@media (max-width: 768px) {
+
+  /* Stack nav links vertically */
+  #mainNav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  #mainNav ul {
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  #mainNav ul li a:link,
+  #mainNav ul li a:visited {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Reduce font sizes */
+  #mainHeader {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Reduce image sizes */
+  .event-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Fluid layout with % */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  /* Single column bulletin on mobile */
+  .bulletin-columns {
+    column-count: 1;
+  }
+
+  /* Table scrollable on small screens */
+  #eventsTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Gallery table stacked */
+  .gallery-table,
+  .gallery-table tbody,
+  .gallery-table tr,
+  .gallery-table td {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   CSS Exercise 10 — Flexbox layout for event cards
+   ============================================================ */
+
+/* Flexbox: event cards row */
+#events .cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#events .cards-row .eventCard {
+  flex: 1 1 260px;
+}
