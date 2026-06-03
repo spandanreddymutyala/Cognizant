@@ -1,4 +1,4 @@
--- 1. User Upcoming Events.
+-- 1. User Upcoming Events
 
 SELECT u.full_name, e.title, e.city, e.start_date
 FROM Users u
@@ -10,7 +10,7 @@ ORDER BY e.start_date;
 
 
 
--- 2. Top Rated Events.
+-- 2. Top Rated Events
 
 SELECT e.title, AVG(f.rating) AS avg_rating
 FROM Events e
